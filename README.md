@@ -82,16 +82,17 @@ composer update
 
 ### Database
 
-Edit the file `config/db.php` with real data, for example:
+Edit the file `common/main` with real data, for example:
 
 ```php
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2reference_book',
-    'username' => 'root',
-    'password' => '',
-    'charset' => 'utf8',
-];
+'components' => [
+  'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=Yii2-books',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+        ],
 ```
 
 ### Apply migrations
@@ -100,8 +101,6 @@ yii migrate --migrationPath=@yii/rbac/migrations
 yii migrate
 ~~~
 
-CONFIGURATION
--------------
 
 DEMO DATA
 ------------
